@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Pet</title>
+</head>
+
+<body>
+
+    <h1>Edit Pet Listing</h1>
+    <form action="/pets/<%=pet._id%>?_method=PUT" method="POST">
+        <div>
+            <label for="">Name</label>
+            <input type="text" id="name" name="pet[name]" value="<%=pet.name%>">
+        </div>
+        <div>
+            <label for="">Price</label>
+            <input type="text" id="price" name="pet[price]" value="<%=pet.price%>">
+        </div>
+        <button>Update</button>
+        <div>
+            <a href=" /pets/<%= pet._id%>">Back to Pet</a>
+        </div>
+
+    </form>
+
+</body>
+
+</html>
