@@ -7,6 +7,7 @@ const petSchema = new mongoose.Schema({
     name: String,
     price: Number,
     isAvailable: Boolean,
+    image: String
 
 })
 

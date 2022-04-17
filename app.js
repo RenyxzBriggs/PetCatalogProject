@@ -3,6 +3,7 @@ const webApp = express();
 const path = require('path');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
+const ejsMate = require('ejs-mate');
 
 const Pet = require('./models/pet');
 
@@ -21,6 +22,8 @@ db.once("open", () => {
     console.log("Database connected");
 })
 
+
+webApp.engine('ejs', ejsMate);
 webApp.set('view engine', 'ejs');
 webApp.set('views', path.join(__dirname, 'views'))
 
